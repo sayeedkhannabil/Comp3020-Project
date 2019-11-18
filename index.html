@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HCI Cinema</title>
+	<style type="text/css">
+		
+		.ct{
+			display: grid;
+			grid-template-columns: 3fr 20fr 1fr;
+			grid-gap: 1em; 
+		}
+
+		.button{
+			background-color: white;
+			border: none;
+			color: red;
+			padding: 8px 10px;
+			text-align: center;
+			display: inline-block;
+			font-size: 16px;
+		}
+
+		select{
+			height:40px;
+			background-color: transparent;
+		}
+
+		.container {
+			position: relative;
+			text-align: center;
+			color: black;
+			font-size: 2em;
+			margin: 0px auto;
+			width: 1000px;
+		}
+		.centered{
+			position: absolute;
+			top: 38%;
+			left: 50%;
+			width: 100%;
+			transform: translate(-50%, -50%)
+		}
+
+		.movieBox{
+			position: relative;
+			text-align: center;
+			color: black;
+			font-size: 20px;
+			margin: 0px auto;
+			width: 1200px;
+			height: 600px;
+			border-style: ridge;
+		}
+		.allMoviesContainer{
+			position: relative;
+			text-align: right;
+			color: black;
+			font-size: 20px;
+			margin: 0px auto;
+			width: 1200px;
+			height: 40px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="ct">
+
+		<! THE LOGO>
+		<div align="left">
+		<a href="index.html">
+			<img src="img/logo.jpeg" alt="HCI Cinema" height="200" width="220" class="logo_center" id="LOGO">
+		</a>
+		</div>
+
+		<!THE RIBON>
+		<div class="container">
+		<img src="img/ribbon.jpeg" style="width:100%;">
+		<div class="centered">
+			
+			<form>
+				<Label>Express Ticketing:</Label>
+				<select name="movie">
+					<option value="Choose Movie">Choose Movie</option>
+					<option value="maleficient">Maleficient</option>
+					<option value="lionKing">Lion King</option>
+					<option value="zombieLand">Zombie Land</option>
+				</select>
+				<select name="location">
+					<option value="location">Location</option>
+					<option value="poloPark">Polo Park</option>
+					<option value="pembina">Pembina</option>
+					<option value="stVital">St. Vital</option>
+				</select>
+				<select name="day">
+					<option value="weekday">Weekday</option>
+					<option value="sunday">Sunday</option>
+					<option value="monday">Monday</option>
+					<option value="tuesday">Tuesday</option>
+					<option value="wednesday">Wednesday</option>
+					<option value="thursday">Thursday</option>
+					<option value="friday">Friday</option>
+					<option value="saturday">Saturday</option>
+				</select>
+				<select name="time">
+					<option value="time">Time</option>
+					<option value="1030">10:30 am</option>
+					<option value="1430">2:30 pm</option>
+					<option value="1830">6:30 pm</option>
+				</select>
+				<button style="height: 40px;" type="button">Checkout</button>
+			</form>	
+
+		</div>
+		
+
+	</div>
+		
+		<!HELP BUTTON>
+		<div align="right">
+			<button type="button" class="button help"><u>HELP</u></button>
+			<button type="button" class="button ca" autofocus="autofocus"><u>Create Account</u></button>
+			<button type="button" class="button ca"><u>Rent Theatre</u></button>
+
+		</div>
+
+	</div>
+	</div>
+
+	<div class="movieBox">
+	
+		<a href="index.html"><img style="width: 180px; height: 250px; margin: 25px;" src="img/movies/AboMiable.jpg"></a>
+		<img style="width: 180px; height: 250px; margin: 25px;" src="img/movies/Addam.jpg">
+		<img style="width: 180px; height: 250px; margin: 25px;" src="img/movies/Avengers.jpg">
+		<img style="width: 180px; height: 250px; margin: 25px;" src="img/movies/download.jpg">
+		<img style="width: 180px; height: 250px; margin: 25px;" src="img/movies/gemin man.jpg">
+		<img style="width: 180px; height: 250px; margin: 25px;" src="img/movies/Hustlers.jpg">
+		<img style="width: 180px; height: 250px; margin: 25px;" src="img/movies/Lion_King.jpg">
+		<img style="width: 180px; height: 250px; margin: 25px;" src="img/movies/Rambo.jpg">
+		<img style="width: 180px; height: 250px; margin: 25px; border-style: solid;" src="img/movies/Rockey.jpg">
+		<img style="width: 180px; height: 250px; margin: 25px;" src="img/movies/ToyStory.jpg">
+
+	</div>
+
+	<div class="allMoviesContainer">
+
+		<button style="Height: 40px;" type=button>All Movies </button>
+
+	</div>
+
+</body>
+</html>
