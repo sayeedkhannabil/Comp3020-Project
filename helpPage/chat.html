@@ -1,47 +1,132 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            div.help {
-                background-color: lightgrey;
-                width: 300px;
-                border: 15px solid rgba(59, 93, 179, 0.838);
-                padding: 50px;
-                margin: 30px;
-                font-size: 20;
-            }
-        </style>
-        <script>
-            know = {
-                "hello" : "hi",
-                "how are you?" : "good",
-                "I have a problem about X" : "Here is the solution for X",
-                "ok" : ":)"
-            };
-            function talk() {
-                var user = document.getElementById("userBox").value;
-                document.getElementById("userBox").value = "";
-                document.getElementById("chatLog").innerHTML += user+"<br>";
-                if (user in know) {
-                    document.getElementById("chatLog").innerHTML += know[user]+"<br>";
-                } else {
-                    document.getElementById("chatLog").innerHTML += "I don't understand...<br>";
-                }
-            } 
-        </script>
-    </head>
-    <body>
-            <!---- THE LOGO -->
-            <div align="left">
-            <a href="../index.html">
-                <img src="../img/logo.jpeg" alt="HCI Cinema" height="200" width="220" class="logo_center" id="LOGO">
-            </a>
-            </div>
-       
-        <div class="help" align = "center">
-            <img src="customer.jpg" height="300" width="300" alt="chatLog">
-            <p id="chatLog">- - C H A T - -<br></p>
-            <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
-        </div>        
 
-    </body>
+<head>
+	<title>HCI Cinema</title>
+	<style type="text/css">
+		.ct {
+			display: grid;
+			grid-template-columns: 3fr 20fr 1fr;
+			grid-gap: 1em;
+		}
+
+		.button {
+			background-color: white;
+			border: none;
+			color: red;
+			padding: 8px 10px;
+			text-align: center;
+			display: inline-block;
+			font-size: 16px;
+		}
+
+		select {
+			height: 40px;
+			background-color: transparent;
+		}
+
+		.container {
+			position: relative;
+			text-align: center;
+			color: black;
+			font-size: 2em;
+			margin: 0px auto;
+			width: 1000px;
+		}
+
+		.centered {
+			position: absolute;
+			top: 38%;
+			left: 50%;
+			width: 100%;
+			transform: translate(-50%, -50%)
+		}
+
+		.ca {
+			margin-top: 300;
+		}
+
+		.halum {
+			display: grid;
+			grid-template-columns: 15fr 12fr 12fr;
+			grid-gap: 0em;
+		}
+
+		.chat {
+			background-color: lightgrey;
+			width: 300px;
+			border: 15px solid rgba(59, 93, 179, 0.838);
+			padding: 50px;
+			margin: 30px;
+			font-size: 20;
+		}
+	</style>
+
+	<script>
+		know = {
+			"hello": "hi",
+			"how are you?": "good",
+			"I have a problem about X": "Here is the solution for X",
+			"ok": ":)"
+		};
+		function talk() {
+			var user = document.getElementById("userBox").value;
+			document.getElementById("userBox").value = "";
+			document.getElementById("chatLog").innerHTML += user + "<br>";
+			if (user in know) {
+				document.getElementById("chatLog").innerHTML += know[user] + "<br>";
+			} else {
+				document.getElementById("chatLog").innerHTML += "I don't understand...<br>";
+			}
+		} 
+	</script>
+
+</head>
+
+<body>
+	<div class="ct">
+
+		<!-- THE LOGO -->
+		<div align="left">
+			<a href="../index.html">
+				<img src="../img/logo.jpeg" alt="HCI Cinema" height="200" width="220" class="logo_center" id="LOGO">
+			</a>
+		</div>
+
+		<!THE RIBON>
+			<div class="container">
+				<img src="../img/ribbon.jpeg" style="width:100%;">
+				<div class="centered">
+
+					<form>
+						<Label>ChatBox</Label>
+					</form>
+
+				</div>
+
+
+			</div>
+
+			<!--HELP BUTTON-->
+			<div align="right">
+				<a href="helpPage.html"> <button type="button" class="button help"><u>HELP</u></button> </a>
+				<button type="button" class="button ca" autofocus="autofocus"><u>Create Account</u></button>
+				<button type="button" class="button ca"><u>Rent Theatre</u></button>
+
+			</div>
+
+	</div>
+
+	<div class="halum">
+		<div></div>
+		<div class = "chat" align="center">
+			<img src="customer.jpg" height="300" width="300" alt="chatLog">
+			<p id="chatLog">- - C H A T - -<br></p>
+			<input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
+		</div>
+		<div></div>
+	</div>
+
+</body>
+
 </html>
