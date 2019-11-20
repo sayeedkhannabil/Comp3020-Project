@@ -1,32 +1,168 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <style type="text/css">
-            h2 {
-                color: rgb(41, 41, 230);
-                font-family: 'Courier New', Courier, monospace;
-            }
-            .container {
+<head>
+	<title>HCI Cinema</title>
+	<style type="text/css">
+
+		.ct{
+			display: grid;
+			grid-template-columns: 3fr 20fr 1fr;
+			grid-gap: 1em;
+		}
+
+		.button{
+			background-color: white;
+			border: none;
+			color: red;
+			padding: 8px 10px;
+			text-align: center;
+			display: inline-block;
+			font-size: 16px;
+		}
+
+		select{
+			height:40px;
+			background-color: transparent;
+		}
+
+		.container {
 			position: relative;
 			text-align: center;
 			color: black;
 			font-size: 2em;
 			margin: 0px auto;
-		    }
-            </style>
-    </head>
-    <body>
+			width: 1000px;
+		}
+		.centered{
+			position: absolute;
+			top: 38%;
+			left: 50%;
+			width: 100%;
+			transform: translate(-50%, -50%)
+		}
+		.ca{
+			margin-top: 300;
+		}
 
-        <h2>Call Customer Care:</h2>
-        <div class = "container">
+		h2 {
+                color: rgb(41, 41, 230);
+                font-family: 'Courier New', Courier, monospace;
+            }
+            .customer {
+                position: relative;
+                text-align: left;
+                color: black;
+                font-size: 1.5em;
+                margin: 0px auto;
+            }
+
+            a.butt {
+                -webkit-appearance: button;
+                -moz-appearance: button;
+                appearance: button;
+                padding: 10px;
+                margin: 10px;
+                text-decoration: blue;
+            }
+
+
+
+
+	</style>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <script>
+            $(function() {
+                $('#customer').change(function(){
+                    $('.value').hide();
+                    $('#' + $(this).val()).show();
+                });
+            });
+        </script>
+
+
+</head>
+<body>
+	<div class="ct">
+
+		<! THE LOGO>
+		<div align="left">
+		<a href="index.html">
+			<img src="../img/logo.jpeg" alt="HCI Cinema" height="200" width="220" class="logo_center" id="LOGO">
+		</a>
+		</div>
+
+		<!THE RIBON>
+		<div class="container">
+		<img src="../img/ribbon.jpeg" style="width:100%;">
+		<div class="centered">
+
+			<form>
+				<Label>Help - Center:</Label>
+			</form>
+
+		</div>
+
+
+	</div>
+
+		<!HELP BUTTON>
+		<div align="right">
+			<button type="button" class="button help"><u>HELP</u></button>
+			<button type="button" class="button ca" autofocus="autofocus"><u>Create Account</u></button>
+			<button type="button" class="button ca"><u>Rent Theatre</u></button>
+
+		</div>
+	</div>
+
+	<h2>Call Customer Care:</h2>
+        <div>
                 <form>
                         <Label>Select Theatre</Label>
-                        <select name="Theatre" size="5">
-                            <option value="Theatre">Choose Movie</option>
-                            <option value="Saint-Vital">Maleficient</option>
-                            <option value="lionKing">Lion King</option>
-                            <option value="zombieLand">Zombie Land</option>
+                        <select id = "customer",name="Theatre">
+                            <option value="None">Choose Theatre</option>
+                            <option value="stVital">St. Vital Movie Theatre</option>
+                            <option value="richardson">Richardson Theatre</option>
+                            <option value="chancellor">Chancellor Movie Theatre</option>
                         </select>
+
         </div>
-        
-    </body>
+
+        <div id="stVital" class="value" style="display:none">
+            <p style="font-family: 'Courier New', Courier, monospace; color: rgb(77, 77, 228);">
+                Call : 204-555-0136
+            </p>
+
+            <p style="font-family: 'Courier New', Courier, monospace; color: rgb(77, 77, 228);">
+                    Email : stvital@hci.com
+            </p>
+        </div>
+        <div id="richardson" class="value" style="display:none">
+                <p style="font-family: 'Courier New', Courier, monospace; color: rgb(77, 77, 228);">
+                        Call : 204-555-0180
+                </p>
+
+                <p style="font-family: 'Courier New', Courier, monospace; color: rgb(77, 77, 228);">
+                        Email : richardson@hci.com
+                </p>
+        </div>
+
+        <div id="chancellor" class="value" style="display:none">
+            <p style="font-family: 'Courier New', Courier, monospace; color: rgb(77, 77, 228);">
+                Call : 204-555-0115
+            </p>
+
+            <p style="font-family: 'Courier New', Courier, monospace; color: rgb(77, 77, 228);">
+                    Email : chancellor@hci.com
+            </p>
+        </div>
+
+
+
+        <a href="chat.html" class="butt">CHAT</a>
+        <a href="faq.html" class="butt">FAQ</a>
+
+</body>
 </html>
