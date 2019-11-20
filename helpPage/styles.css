@@ -1,0 +1,15 @@
+.faq {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.answer {
+    display: none;
+    font-size: 20px;
+}
+
+.question {
+    cursor: pointer;
+    color: blue;
+    font-size: 30px;
+}

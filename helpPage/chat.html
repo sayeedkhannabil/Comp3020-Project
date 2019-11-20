@@ -1,7 +1,7 @@
 <html>
     <head>
         <style>
-            div {
+            div.help {
                 background-color: lightgrey;
                 width: 300px;
                 border: 15px solid rgba(59, 93, 179, 0.838);
@@ -30,8 +30,14 @@
         </script>
     </head>
     <body>
+            <!---- THE LOGO -->
+            <div align="left">
+            <a href="../index.html">
+                <img src="../img/logo.jpeg" alt="HCI Cinema" height="200" width="220" class="logo_center" id="LOGO">
+            </a>
+            </div>
        
-        <div align = "center">
+        <div class="help" align = "center">
             <img src="../img/customer.jpg" height="300" width="300" alt="chatLog">
             <p id="chatLog">- - C H A T - -<br></p>
             <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
