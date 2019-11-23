@@ -1,0 +1,40 @@
+<<!DOCTYPE html>
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>TEST</title>
+        <script>
+            var count = 1;
+            function setColor(btn, color) {
+                var property = document.getElementsByClassName(btn);
+                if (count == 0) {
+                    property.style.backgroundColor = "#000"
+                    count = 1;        
+                }
+                else {
+                    property.style.backgroundColor = "#4CAF50"
+                    count = 0;
+                }
+            }
+        </script>
+
+        <style type="text/css">
+            .button2 {
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 6px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 11px;
+                margin: 2px 0px;
+            	border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="modalBtn" class="button2" onclick="setColor('modalBtn', '#4CAF50')";>14</button>
+    </body>
+</html>
