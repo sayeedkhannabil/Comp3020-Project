@@ -98,23 +98,56 @@
 		<div class="container">
 		<img src="../img/ribbon.jpeg" style="width:100%;">
 		<div class="centered">
-
+			
 			<form>
-				<Label>Help - Center:</Label>
-			</form>
+				<Label>Express Ticketing:</Label>
+				<select name="movie">
+					<option value="Choose Movie">Choose Movie</option>
+					<option value="maleficient">Maleficient</option>
+					<option value="lionKing">Lion King</option>
+					<option value="zombieLand">Zombie Land</option>
+				</select>
+				<select name="location">
+					<option value="location">Location</option>
+					<option value="poloPark">Polo Park</option>
+					<option value="pembina">Pembina</option>
+					<option value="stVital">St. Vital</option>
+				</select>
+				<select name="day">
+					<option value="weekday">Weekday</option>
+					<option value="sunday">Sunday</option>
+					<option value="monday">Monday</option>
+					<option value="tuesday">Tuesday</option>
+					<option value="wednesday">Wednesday</option>
+					<option value="thursday">Thursday</option>
+					<option value="friday">Friday</option>
+					<option value="saturday">Saturday</option>
+				</select>
+				<select name="time">
+					<option value="time">Time</option>
+					<option value="1030">10:30 am</option>
+					<option value="1430">2:30 pm</option>
+					<option value="1830">6:30 pm</option>
+				</select>
+				<button style="height: 40px;" type="button" onclick="window.location.href = 'checkout.html';">Checkout</button>
+			</form>	
+
+			
 
 		</div>
-
+		
 
 	</div>
-
+		
 		<!HELP BUTTON>
 		<div align="right">
-			<a href="helpPage.html"> <button type="button" class="button help"><u>HELP</u></button> </a>
+			<button type="button" class="button help"><u>HELP</u></button>
 			<button type="button" class="button ca" autofocus="autofocus"><u>Create Account</u></button>
 			<button type="button" class="button ca"><u>Rent Theatre</u></button>
 
 		</div>
+
+	</div>
 	</div>
 
 	<h2>Call Customer Care:</h2>
@@ -124,8 +157,8 @@
                         <select id = "customer",name="Theatre">
                             <option value="None">Choose Theatre</option>
                             <option value="stVital">St. Vital Movie Theatre</option>
-                            <option value="richardson">Richardson Theatre</option>
-                            <option value="chancellor">Chancellor Movie Theatre</option>
+                            <option value="polopark">Polo Park</option>
+                            <option value="pembina">Pembina</option>
                         </select>
 
         </div>
@@ -139,23 +172,23 @@
                     Email : stvital@hci.com
             </p>
         </div>
-        <div id="richardson" class="value" style="display:none">
+        <div id="polopark" class="value" style="display:none">
                 <p style="font-family: 'Courier New', Courier, monospace; color: rgb(77, 77, 228);">
                         Call : 204-555-0180
                 </p>
 
                 <p style="font-family: 'Courier New', Courier, monospace; color: rgb(77, 77, 228);">
-                        Email : richardson@hci.com
+                        Email : polopark@hci.com
                 </p>
         </div>
 
-        <div id="chancellor" class="value" style="display:none">
+        <div id="pembina" class="value" style="display:none">
             <p style="font-family: 'Courier New', Courier, monospace; color: rgb(77, 77, 228);">
                 Call : 204-555-0115
             </p>
 
             <p style="font-family: 'Courier New', Courier, monospace; color: rgb(77, 77, 228);">
-                    Email : chancellor@hci.com
+                    Email : pembina@hci.com
             </p>
         </div>
 

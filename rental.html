@@ -1,0 +1,236 @@
+<html>
+<header>
+<style>
+	select{
+	height:40px;
+}
+.centered{
+	position: absolute;
+	top:38%
+	left:50%
+	width:100%
+	transform: translate(-50%, -50%)
+}
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: orange;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+    .ct{
+      display: grid;
+      grid-template-columns: 3fr 20fr 1fr;
+      grid-gap: 1em; 
+    }
+    .container1{
+      position: relative;
+      text-align: center;
+      color: black;
+      font-size: 2em;
+      margin: 0px auto;
+      width: 1000px;
+    }
+    .centered1{
+      position: absolute;
+      top: 38%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -50%)
+    }
+
+</style>
+</header>
+
+<body>
+
+	<div class="container1">
+    <img src="ribbon.jpeg" style="width:100%;">
+    <div class="centered1">
+      
+      <form>
+        <label>Express Ticketing:</label>
+        <select name="movie">
+          <option value="Choose Movie">Choose Movie</option>
+          <option value="maleficient">Maleficient</option>
+          <option value="lionKing">Lion King</option>
+          <option value="zombieLand">Zombie Land</option>
+        </select>
+        <select name="location">
+          <option value="location">Location</option>
+          <option value="poloPark">Polo Park</option>
+          <option value="pembina">Pembina</option>
+          <option value="stVital">St. Vital</option>
+        </select>
+        <select name="day">
+          <option value="weekday">Weekday</option>
+          <option value="sunday">Sunday</option>
+          <option value="monday">Monday</option>
+          <option value="tuesday">Tuesday</option>
+          <option value="wednesday">Wednesday</option>
+          <option value="thursday">Thursday</option>
+          <option value="friday">Friday</option>
+          <option value="saturday">Saturday</option>
+        </select>
+        <select name="time">
+          <option value="time">Time</option>
+          <option value="1030">10:30 am</option>
+          <option value="1430">2:30 pm</option>
+          <option value="1830">6:30 pm</option>
+        </select>
+        <button style="height: 40px;" type="button">Checkout</button>
+      </form> 
+
+    </div>   
+  </div>
+
+<h2>Rent Whole Theatre</h2>
+<p>Enter Text.</p>
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      
+        <div class="row">
+          <div class="col-50">
+            <h3>Header</h3>
+            <label>Theaters</label>
+            <input type="text" id="How Many Theaters" name="How Many Theaters" placeholder="How Many Theaters">
+
+            <label for="Date"><i class="Date"></i> Date</label>
+            <input type="text" id="Choose a Date" name="Choose a Date" placeholder="Choose a Date">
+
+            <label for="Start Time"><i class="Start Time"></i> Start Time</label>
+            <input type="text" id="Start Time" name="Start Time" placeholder="Start Time">
+
+            <label for="End Time"><i class="End Time"></i> End Time</label>
+            <input type="text" id="End Time" name="End Time" placeholder="End Time">
+
+            <label for="Duration"><i class="Duration"></i> Duration</label>
+            <input type="text" id="Duration" name="Duration" placeholder="Duration">
+
+            <label for="Rental Cost"><i class="Rental Cost"></i> Rental Cost</label>
+            <input type="text" id="Rental Cost" name="Rental Cost" placeholder="Rental Cost">
+
+            <label for="Seat"><i class="Seat"></i> Seat</label>
+            <input type="text" id="Select Seat" name="Select Seat" placeholder="Select Seat">
+          </div>
+          
+
+          <div class="col-50">
+            <h3>Header</h3>
+            <label>What Do you want to do in the Theatre?</label>
+            <br>
+            <br>
+            <input type="checkbox" unchecked="checked" name="Watch a Movie">Watch a Movie
+            <select> 
+            <option value="Maleficent 2">Maleficent 2</option>
+            <option value="Star Wars: The Rise of Skywalker">Star Wars: The Rise of Skywalker</option>
+            <option value="Lion King">Lion King</option>
+            <option value="Ford v. Ferrari">Ford v. Ferrari</option>
+            </select>
+            <br>
+            <br>
+            <input type="checkbox" unchecked="checked" name="Watch a video"><label>Watch a video</label>
+            <input type="file" id="myFile">Upload File Here</input>
+            <br>
+            <br>
+            <input type="checkbox" unchecked="checked" name="Make a Presentation"><label>Make a Presentation</label>
+            (Choose this if you will need microphones and / or a connection for a laptop)
+            <input type="text" id="expyear" name="expyear" placeholder="Type Here">      
+            <br>
+            <br>
+            <input type="checkbox" unchecked="checked" name="Something Else"><label>Something Else</label>
+            (You can provide your phone number and a theatre Name team member will call you within 2 hours of checking out)
+                <input type="text" id="cvv" name="cvv" placeholder="Phone number here">
+             
+            
+          </div>      
+        </div>
+
+        <label>
+        <input type="checkbox" unchecked="checked" name="sameadr"> Food for Theatre rentals MUST be ordered prior to date of rental.
+        </label>
+        <input type="submit" value="Order Food/Drink" class="btn">
+        <input type="submit" value="Continue to checkout" class="btn">
+    </div>
+  </div>
+
+</body>
+</html>

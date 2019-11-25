@@ -1,0 +1,627 @@
+<html>
+<head>
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #ffa500;
+  color: white;
+}
+  .search-container {
+     float: right;
+}
+.split {
+  height: 100%;
+  width: 30%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+.top{
+  top:20;
+}
+.left {
+  left: 100;
+}
+
+.right {
+  right: 200;
+
+}
+.header {
+ 
+  padding: 20px;
+  text-align: center;
+}
+
+.ct{
+      display: grid;
+      grid-template-columns: 3fr 20fr 1fr;
+      grid-gap: 1em; 
+    }
+
+    .button{
+      background-color: white;
+      border: none;
+      color: red;
+      padding: 8px 10px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+    }
+
+    select{
+      height:40px;
+      background-color: transparent;
+    }
+
+    .container {
+      position: relative;
+      text-align: center;
+      color: black;
+      font-size: 2em;
+      margin: 0px auto;
+      width: 1000px;
+    }
+    .centered{
+      position: absolute;
+      top: 38%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -50%)
+    }
+
+    .movieBox{
+      position: relative;
+      text-align: center;
+      color: black;
+      font-size: 20px;
+      margin: 0px auto;
+      width: 1200px;
+      height: 600px;
+      border-style: ridge;
+    }
+    .allMoviesContainer{
+      position: relative;
+      text-align: right;
+      color: black;
+      font-size: 20px;
+      margin: 0px auto;
+      width: 1200px;
+      height: 40px;
+    }
+
+  </style>
+
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+    <img src="ribbon.jpeg" style="width:100%;">
+    <div class="centered">
+      
+      <form>
+        <Label>Express Ticketing:</Label>
+        <select name="movie">
+          <option value="Choose Movie">Choose Movie</option>
+          <option value="maleficient">Maleficient</option>
+          <option value="lionKing">Lion King</option>
+          <option value="zombieLand">Zombie Land</option>
+        </select>
+        <select name="location">
+          <option value="location">Location</option>
+          <option value="poloPark">Polo Park</option>
+          <option value="pembina">Pembina</option>
+          <option value="stVital">St. Vital</option>
+        </select>
+        <select name="day">
+          <option value="weekday">Weekday</option>
+          <option value="sunday">Sunday</option>
+          <option value="monday">Monday</option>
+          <option value="tuesday">Tuesday</option>
+          <option value="wednesday">Wednesday</option>
+          <option value="thursday">Thursday</option>
+          <option value="friday">Friday</option>
+          <option value="saturday">Saturday</option>
+        </select>
+        <select name="time">
+          <option value="time">Time</option>
+          <option value="1030">10:30 am</option>
+          <option value="1430">2:30 pm</option>
+          <option value="1830">6:30 pm</option>
+        </select>
+        <button style="height: 40px;" type="button">Checkout</button>
+      </form> 
+
+    </div>
+    
+
+  </div>
+
+
+  
+
+<div style ="margin-left: 100px">
+<h2 = style="color: green">Pre-Order Food and Beverages</h2>
+</div>
+
+<div class="split left">
+<table id="customers"; style="margin-top: 200px;">
+
+  <tr>
+    <th>Product</th>
+    <th>Size</th>
+    <th>Quantity</th>
+    <th>Price</th>
+  </tr>
+
+  <tr>
+    <td>Popcorns<img src="popcorn.png" alt="Trulli" width="70" height="55"></td>
+
+    <td><form>
+
+            <label>Choose your size</label>
+            <select id = "Myselect" onchange= "findTotal(); pst(); gst(); subtotal();" name = "Myselect">
+              <option value="0">N/A</option>
+               <option value="25" id = "XL">XL</option>
+               <option value="20" id = "L">L</option>
+               <option value="15" id = "M">M</option>
+               <option value="10" id = "S">S</option>
+            </select>
+           </form>
+         </td>
+          
+         <td>
+           <form>
+            <select id = "qty" onchange = "findTotal();subtotal();" name = "qty">
+            <option value = "0" id = "0">0</option>
+            <option value = "1" id = "1">1</option>
+            <option value = "2" id = "2">2</option>
+          </select>
+        <!--<button type = 'button' onclick="myFunction()"> Select </button> -->
+           </form>
+         </td>
+
+         <td>
+           <form>
+            <select>
+           <option>Price List</option>
+           <option>XL:$25</option>
+           <option>L:$20</option>
+           <option>M:$15</option>
+           <option>S:$10</option>
+         </select>
+           </form>
+         </td>
+
+  </tr>
+
+  <tr>
+    <td>Soft Drink<img src="softdrink.png" alt="Trulli" width="55" height="70"></td> 
+    <td>
+      <form>
+            <label>Choose your size</label>
+            <select id = "Myselect1" onchange = "findTotal(); pst(); gst(); subtotal();" name = "Myselect">
+              <option value="0">N/A</option>
+               <option value="4.25">XL</option>
+               <option value="3.25">L</option>
+               <option value="2.25">M</option>
+               <option value="1.25">S</option>
+            </select>
+          </form>
+         </td>
+
+        <td>
+           <form>
+            <select id = "qty" onchange = "findTotal();subtotal(); " name = "qty">
+            <option value = "0" id = "0">0</option>
+            <option value = "1" id = "1">1</option>
+            <option value = "2" id = "2">2</option>
+          </select>
+       <!-- <button type = 'button' onclick="myFunction1()"> Select </button> -->
+           </form>
+         </td>
+
+         <td>
+           <form>
+            <select>
+              <option>Price List</option>
+           <option>XL:$4.25</option>
+           <option>L:$3.25</option>
+           <option>M:$2.25</option>
+           <option>S:$1.25</option>
+         </select>
+           </form>
+         </td>
+  </tr>
+
+  <tr>
+    <td>Ice Water<img src="water.png" alt="Trulli" width="55" height="70"></td>
+    <td>
+      <form>
+            <label>Choose your size</label>
+            <select id = "Myselect2" onchange= "findTotal(); pst(); gst(); subtotal();" name = "Myselect">
+              <option value="0">N/A</option>
+               <option value="4.25">XL</option>
+               <option value="3.25">L</option>
+               <option value="2.25">M</option>
+               <option value="1.25">S</option>
+            </select>
+  </form>
+         </td>
+
+        <td>
+           <form>
+            <select id = "qty" onchange = "findTotal();subtotal(); " name = "qty">
+            <option value = "0" id = "0">0</option>
+            <option value = "1" id = "1">1</option>
+            <option value = "2" id = "2">2</option>
+          </select>
+        <!--<button type = 'button' onclick="myFunction2()"> Select </button>-->
+           </form>
+         </td>
+
+         <td>
+           <form>
+          <select>
+            <option>Price List</option>
+           <option>XL:$4.25</option>
+           <option>L:$3.25</option>
+           <option>M:$2.25</option>
+           <option>S:$1.25</option>
+         </select>
+           </form>
+         </td>
+  </tr>
+  <tr>
+    <td>Coffee<img src="coffee.png" alt="Trulli" width="55" height="55"></td>
+    <td><form>
+            <label>Choose your size</label>
+            <select id = "Myselect3"  onchange = "findTotal(); pst(); gst(); subtotal();" name = "Myselect">
+              <option value="0">N/A</option>
+               <option value="4.25">XL</option>
+               <option value="3.25">L</option>
+               <option value="2.25">M</option>
+               <option value="1.25">S</option>
+            </select>
+  </form>
+         </td>
+
+       <td>
+           <form>
+            <select id = "qty" onchange = "findTotal();subtotal(); " name = "qty">
+            <option value = "0" id = "0">0</option>
+            <option value = "1" id = "1">1</option>
+            <option value = "2" id = "2">2</option>
+          </select>
+       <!-- <button type = 'button' onclick="myFunction3()"> Select </button>-->
+           </form>
+         </td>
+
+         <td>
+           <form>
+           <select>
+            <option>Price List</option>
+           <option>XL:$4.25</option>
+           <option>L:$3.25</option>
+           <option>M:$2.25</option>
+           <option>S:$1.25</option>
+         </select>
+           </form>
+         </td>
+  </tr>
+  <tr>
+    <td>Chips<img src="chips.png" alt="Trulli" width="55" height="55"></td> </td>
+    <td>
+      <form>
+            <label>Choose your size</label>
+            <select id = "Myselect4"  onchange = "findTotal(); pst(); gst(); subtotal();" name = "Myselect">
+              <option value="0">N/A</option>
+               <option value="4.25">XL</option>
+               <option value="3.25">L</option>
+               <option value="2.25">M</option>
+               <option value="1.25">S</option>
+            </select>
+         </form>
+         </td>
+         <td>
+           <form>
+            <select id = "qty" onchange = "findTotal();subtotal(); " name = "qty">
+            <option value = "0" id = "0">0</option>
+            <option value = "1" id = "1">1</option>
+            <option value = "2" id = "2">2</option>
+          </select>
+        <!--<button type = 'button' onclick="myFunction4()"> Select </button> -->
+           </form>
+         </td>
+
+         <td>
+           <form>
+         <select>
+          <option>Price List</option>
+           <option>XL:$4.25</option>
+           <option>L:$3.25</option>
+           <option>M:$2.25</option>
+           <option>S:$1.25</option>
+         </select>
+           </form>
+         </td>
+  </tr>
+  <tr>
+    <td>Ice Cream<img src="icecream.png" alt="Trulli" width="55" height="70"></td> </td>
+    <td>
+      <form>
+            <label>Choose your size</label>
+             <select id = "Myselect5"  onchange = "findTotal(); pst(); gst(); subtotal();" name = "Myselect">
+              <option value="0">N/A</option>
+               <option value="4.25">XL</option>
+               <option value="3.25">L</option>
+               <option value="2.25">M</option>
+               <option value="1.25">S</option>
+            </select>
+     </form>
+         </td>
+
+        <td>
+           <form>
+            <select id = "qty" onchange = "findTotal();subtotal(); " name = "qty">
+            <option value = "0" id = "0">0</option>
+            <option value = "1" id = "1">1</option>
+            <option value = "2" id = "2">2</option>
+          </select>
+       <!-- <button type = 'button' onclick="myFunction5()"> Select </button> -->
+           </form>
+         </td>
+
+         <td>
+           <form>
+           <select>
+            <option>Price List</option>
+           <option>XL:$4.25</option>
+           <option>L:$3.25</option>
+           <option>M:$2.25</option>
+           <option>S:$1.25</option>
+         </select>
+           </form>
+         </td>
+  </tr>
+  <tr>
+    <td>Pizza<img src="pizza.png" alt="Trulli" width="55" height="55"></td>
+    <td>
+      <form>
+            <label>Choose your size</label>
+            <select id = "Myselect6"  onchange = "findTotal(); pst(); gst(); subtotal();" name = "Myselect">
+              <option value="0">N/A</option>
+               <option value="25">XL</option>
+               <option value="20">L</option>
+               <option value="15">M</option>
+               <option value="10">S</option>
+            </select>
+           </form>
+         </td>
+         <td>
+           <form>
+            <select id = "qty" onchange = "findTotal();subtotal(); " name = "qty">
+            <option value = "0" id = "0">0</option>
+            <option value = "1" id = "1">1</option>
+            <option value = "2" id = "2">2</option>
+          </select>
+       <!-- <button type = 'button' onclick="myFunction6()"> Select </button> -->
+           </form>
+         </td>
+
+         <td>
+           <form>
+          <select>
+            <option>Price List</option>
+           <option>XL:$4.25</option>
+           <option>L:$3.25</option>
+           <option>M:$2.25</option>
+           <option>S:$1.25</option>
+         </select>
+           </form>
+         </td>
+  </tr>
+
+  <tr>
+  <th>Add Topping</th>
+  <th>Choose your topping</th>
+  </tr>
+
+  <tr>
+  <td>Meat</td>
+  <td>
+     <label>Meat</label> 
+            <select id = "Myselect7"  onchange = "findTotal(); pst(); gst(); subtotal();" name = "Myselect">
+               <option value="0">N/A</option>
+               <option value="2">Anchovies</option>
+               <option value="2">Bacon</option>
+               <option value="2">Chicken</option>
+               <option value="2">Sausage</option>
+            </select>
+          </from>
+  </td>
+   <td>
+           <form>
+            <select id = "qty" onchange = "findTotal();subtotal(); " name = "qty">
+            <option value = "0" id = "0">0</option>
+            <option value = "1" id = "1">1</option>
+            <option value = "2" id = "2">2</option>
+          </select>
+       <!-- <button type = 'button' onclick="myFunction7()"> Select </button> -->
+           </form>
+         </td>
+
+         <td>
+           <form>
+          <select>
+           <option>Price List</option>
+           <option>Anchovies:$2.00</option>
+           <option>Bacon:$2.00</option>
+           <option>Chicken:$2.00/option>
+           <option>Sausage:$2.00</option>
+         </select>
+           </form>
+         </td>
+  </tr>
+
+  <tr>
+  <td>Cheese</td>
+  <td>
+    <label>Cheese</label>
+            <select id = "Myselect8"  onchange = "findTotal(); pst(); gst(); subtotal();" name = "Myselect">
+               <option value="0">N/A</option>
+               <option value="2">Blue Cheese</option>
+               <option value="2">Extra Cheese</option>
+               <option value="2">Feta Cheese</option>
+               <option value="2">Goat CHeese</option>
+            </select>
+            </from>
+  </td>
+ <td>
+           <form>
+            <select id = "qty" onchange = "findTotal();subtotal(); " name = "qty">
+            <option value = "0" id = "0">0</option>
+            <option value = "1" id = "1">1</option>
+            <option value = "2" id = "2">2</option>
+          </select>
+       <!-- <button type = 'button' onclick="myFunction8()"> Select </button> -->
+           </form>
+         </td>
+
+         <td>
+           <form>
+        <select>
+           <option>Price List</option>
+           <option>Blue Cheese:$2.00</option>
+           <option>Extra Cheese:$2.00</option>
+           <option>Feta Cheese:$2.00</option>
+           <option>Goat CHeese:$2.00</option>
+         </select>
+           </form>
+         </td>
+  </tr>
+
+  <tr>
+  <td>Veggie</td>
+  <td>
+     <label>Veggie</label>
+               <select id = "Myselect9"  onchange = "findTotal(); pst(); gst(); subtotal();" name = "Myselect">
+               <option value="0">N/A</option>
+               <option value="2">Artichokes</option>
+               <option value="2">Broccoli</option>
+               <option value="2">Green Olive</option>
+               <option value="2">Hot Banana Pepper</option>
+               <option value="2">Onion</option>
+            </select>
+          </from>
+  </td>
+  <td>
+           <form>
+            <select id = "qty" onchange = "findTotal(); subtotal(); " name = "qty">
+            <option value = "0" id = "0">0</option>
+            <option value = "1" id = "1">1</option>
+            <option value = "2" id = "2">2</option>
+          </select>
+      <!--  <button type = 'button' onclick="myFunction9()"> Select </button> -->
+           </form>
+         </td>
+
+         <td>
+           <form>
+          <select>
+           <option>Price List</option>
+           <option>Artichokes:$2.00</option>
+           <option>Broccoli:$2.00</option>
+           <option>Green Olive:$2.00</option>
+           <option>Hot Banana Pepper:$2.00</option>
+           <option>Onion:$2.00</option>
+         </select>
+           </form>
+         </td>
+  
+  </tr>
+
+  </table>
+  </div>
+
+
+  <div class="split right">
+
+  <table id="customers"; style="margin-top: 200px;">
+
+  <tr>
+  <td>Total</td>
+  <td>    
+  <form>
+  Total : <input type="text" name="total" id="total"/>  </form>
+  </td>
+   <!--<td><button type = 'button' onclick="a()"> Select </button> </td>-->
+  </tr>
+
+  <tr>
+  <td>PST</td>
+  <td>
+  <form>
+  <input type="text" name="pst" id="pst"/> </form>
+  </td>
+  </tr>
+
+  <tr>
+  <td>GST</td>
+  <td>
+  <form>
+  <input type="text" name="gst" id="gst"/> </form>
+  </td>
+  </tr>
+
+  <div class = "search-container">
+  <input class="Text" placeholder="Search">
+  <button type = "button">Search</button>
+  </div>
+
+  </div>
+
+  <tr><th>Subtotal</th>
+  <td>
+  <form>
+  <input type="text" name="Subtotal" id="Subtotal"/> </form>
+  </td>
+  </tr>
+
+  </table>
+
+  <!-- <script type="text/javascript" src = "temTest.js"></script>-->
+  <!-- <script type="text/javascript" src = "pizzaselect.js"></script>-->
+  <!-- <script type="text/javascript" src = "getOption.js"></script>-->
+   <script type="text/javascript" src = "seconSelect.js"></script>
+  <!--<input id="inputQuantity" type="number" placeholder="Quantity" oninput="QuantityConverter(this.value)" onchange="QuantityConverter(this.value)">-->
+
+  </body>
+  </html>
