@@ -116,7 +116,7 @@
 			font-size: 20px;
 			margin: 0px auto;
 			width: 1200px;
-			height: 420px;
+			height: 200px;
 			border-style: ridge;
 		}
 	</style>
@@ -128,7 +128,7 @@
 		<! THE LOGO>
 			<div align="left">
 				<a href="index.html">
-					<img src="./img/logo.jpeg" alt="HCI Cinema" height="200" width="220" class="logo_center"
+					<img src="img/logo.jpeg" alt="HCI Cinema" height="200" width="220" class="logo_center"
 						id="LOGO">
 				</a>
 			</div>
@@ -180,8 +180,8 @@
 				<!HELP BUTTON>
 					<div align="right">
 						<a href="./helpPage/helpPage.html"><button type="button" class="button help"><u>HELP</u></button></a>
-						<a href="create account.html"><button type="button" class="button ca" autofocus="autofocus"><u>Create Account</u></button></a>
-						<a href="rental.html"><button type="button" class="button ca"><u>Rent Theatre</u></button></a>
+						<a href="./create account.html"><button type="button" class="button ca" autofocus="autofocus"><u>Create Account</u></button></a>
+						<a href="./rental.html"><button type="button" class="button ca"><u>Rent Theatre</u></button></a>
 
 					</div>
 
@@ -189,27 +189,27 @@
 
 	<div class="movieBox">
 
-		<img style="width: 280px; height: 380px; margin: 25px;" src="./img/movies/AboMiable.jpg">
+		<img style="width: 280px; height: 380px; margin: 25px;" src="img/movies/AboMiable.jpg">
 		<div class="horizontalBOx">
 
 			<div class="Description" align="left">
 				<p>
 					<h4>ABOMINABLE</h4>
-					<h6>Date of Release: <br>
-						<h6>Genre:<br>
-							<h6>Rate: ****</h6>
+					<h6><u>Date of Release:</u>  <i> September 2019 (USA)</i><br>
+						<h6><u>Genre:</u> <i> Animation, Adventure, Comedy</i><br>
+							<h6><u>Rating:</u> *<i>7.1<sub>/10</sub> (IMDB)</i></h6>
 				</p>
 			</div>
 
 			<div class="Synopsis" align="left">
 				<p>
-					<h6>Synopsis: </h6>
+					<h6><u>Synopsis:</u> <i>Three teenagers must help a Yeti return to his family while avoiding a wealthy man and a zoologist who want it for their own needs.</i></h6>
 				</p>
 			</div>
 
 			<div class="Cast" align="left">
 				<p>
-					<h6>Cast: </h6>
+					<h6><u>Cast:</u> <i> Chloe Bennet, Albert Tsai, Tenzing Norgay Trainor | <a href="https://www.imdb.com/title/tt6324278/fullcredits/?ref_=tt_ov_st_sm">.... see full cast & crew:</a></i></h6>
 				</p>
 			</div>
 
@@ -223,18 +223,17 @@
 		<div class="Ticket_centered">
 
 			<form>
-				<select name="date">
-					<option value="Choose Movie">Select Date</option>
-					<option value="Choose Movie">Abominable</option>
-					<option value="maleficient">Maleficient</option>
-					<option value="lionKing">Lion King</option>
-					<option value="zombieLand">Zombie Land</option>
-				</select>
 				<select name="location">
 					<option value="location">Select Location</option>
 					<option value="poloPark">Polo Park</option>
 					<option value="pembina">Pembina</option>
 					<option value="stVital">St. Vital</option>
+				</select>
+				<select name="date">
+					<option value="location">Date</option>
+					<option value="poloPark">12/10/2019 (Tuesday)</option>
+					<option value="pembina">12/11/2019 (Wednesday)</option>
+					<option value="stVital">12/12/2019 (Thursday)</option>
 				</select>
 				<select name="time">
 					<option value="time">Time</option>
@@ -258,7 +257,7 @@
 					<option value="6">6</option>
 					<option value="7">7</option>
 				</select>
-				<button style="height: 40px;" type="button" onclick="window.location.href = 'checkout.html';">Checkout</button>
+				<a href="./seatSelection/seatSelection.html"><button style="height: 40px;" type="button">Checkout</button></a>
 			</form>
 
 		</div>
