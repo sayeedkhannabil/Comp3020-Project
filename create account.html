@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>HCI Cinema</title>
+	<style type="text/css">
+		.ct {
+			display: grid;
+			grid-template-columns: 3fr 20fr 1fr;
+			grid-gap: 1em;
+		}
+
+		.button {
+			background-color: white;
+			border: none;
+			color: red;
+			padding: 8px 10px;
+			text-align: center;
+			display: inline-block;
+			font-size: 16px;
+		}
+
+		select {
+			height: 40px;
+			background-color: transparent;
+		}
+
+		.container {
+			position: relative;
+			text-align: center;
+			color: black;
+			font-size: 2em;
+			margin: 0px auto;
+			width: 1000px;
+		}
+
+		.centered {
+			position: absolute;
+			top: 38%;
+			left: 50%;
+			width: 100%;
+			transform: translate(-50%, -50%)
+		}
+
+		.movieBox {
+			position: relative;
+			text-align: center;
+			color: black;
+			font-size: 20px;
+			margin: 0px auto;
+			width: 1200px;
+			height: 600px;
+			border-style: ridge;
+		}
+
+		.allMoviesContainer {
+			position: relative;
+			text-align: right;
+			color: black;
+			font-size: 20px;
+			margin: 0px auto;
+			width: 1200px;
+			height: 40px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="ct">
+
+		<! THE LOGO>
+			<div align="left">
+				<a href="index.html">
+					<img src="img/logo.jpeg" alt="HCI Cinema" height="200" width="220" class="logo_center" id="LOGO">
+				</a>
+			</div>
+
+			<!THE RIBON>
+				<div class="container">
+					<img src="img/ribbon.jpeg" style="width:100%;">
+					<div class="centered">
+						<h1>Creating A New Account</h1>
+					</div>
+				</div>
+
+				<!HELP BUTTON>
+					<div align="right">
+						<button type="button" class="button help"><u>HELP</u></button>
+						<button type="button" class="button ca" autofocus="autofocus"><u>Create Account</u></button>
+						<button type="button" class="button ca"><u>Rent Theatre</u></button>
+
+					</div>
+
+	</div>
+	<form action="form.php" method="get">
+		<fieldset>
+			<legend>
+				Personal Details:
+			</legend>
+			<label>
+				First Name:
+				<input type="text" name="fname" size="20" maxlength="60" required="required">
+			</label>
+			<br />
+			<label>
+				Last Name:
+				<input type="text" name="lname" size="20" maxlength="60" required="required">
+			</label>
+			<br />
+			<label>
+				Age:
+				<input type="text" name="age" size="20" maxlength="60" required="required">
+			</label>
+			<br />
+			<label>
+				Billing Address:
+				<input type="address" name="address" size="20" maxlength="60">
+			</label>
+			<br />
+			<label>
+				Email Address:
+				<input type="address" name="address" size="20" maxlength="60" required="required">
+			</label>
+			<br />
+		</fieldset>
+		<br />
+		<fieldset>
+			<legend>
+				Account Details:
+			</legend>
+			<label>
+				User Name:
+				<input type="text" name="User_Name" size="20" maxlength="60" required="required">
+			</label>
+			<br />
+			<label>
+				Password:
+				<input type="text" name="Password" size="20" maxlength="60" required="required">
+			</label>
+			<br />
+			<label>
+				Confirm Password:
+				<input type="text" name="Confirm_Password" size="20" maxlength="60" required="required">
+			</label>
+			<br />
+			<label>
+				Billing Address:
+				<input type="address" name="address" size="20" maxlength="60">
+			</label>
+			<br />
+		</fieldset>
+		<br />
+		<fieldset>
+			<legend>
+				Payment Information:
+			</legend>
+			<label required="required">
+				Type of card:<br/>
+				<input type="radio" name="Card_Type" value="Visa">VISA<br />
+				<input type="radio" name="Card_Type" value="Master">MASTERCARD<br />
+				<input type="radio" name="Card_Type" value="Gift">GIFT CARD<br />
+				<input type="radio" name="Card_Type" value="Paypal">PAYPAL<br />
+			</label>
+			<br />
+			<label>
+				Card Number:
+				<input type="text" name="Card_number" size="20" maxlength="16" required="required">
+			</label>
+			<br />
+			<label>
+				CVV:
+				<input type="text" name="Confirm_Password" size="20" maxlength="3" required="required">
+			</label>
+			<br />
+		</fieldset>
+		<input type="submit">
+	</form>
+</body>
+
+</html>
