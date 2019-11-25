@@ -73,7 +73,15 @@ input[type=text] {
   padding: 7px 0;
   font-size: 24px;
 }
-
+.button {
+      background-color: white;
+      border: none;
+      color: red;
+      padding: 8px 10px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+    }
 .btn {
   background-color: orange;
   color: white;
@@ -120,9 +128,16 @@ span.price {
 </header>
 
 <body>
+  <div class="ct">
+    <! THE LOGO>
+    <div align="left">
+    <a href="index.html">
+      <img src="./img/logo.jpeg" alt="HCI Cinema" height="200" width="220" class="logo_center" id="LOGO">
+    </a>
+    </div>
 
 	<div class="container1">
-    <img src="ribbon.jpeg" style="width:100%;">
+    <img src="./img/ribbon.jpeg" style="width:100%;">
     <div class="centered1">
       
       <form>
@@ -155,21 +170,30 @@ span.price {
           <option value="1430">2:30 pm</option>
           <option value="1830">6:30 pm</option>
         </select>
-        <button style="height: 40px;" type="button">Checkout</button>
+        <button style="height: 40px;" type="button" onclick="window.location.href = 'checkout.html';">Checkout</button>
       </form> 
 
     </div>   
+
   </div>
+    <!HELP BUTTON>
+          <div align="right">
+            <a href="./helpPage/helpPage.html"><button type="button" class="button help"><u>HELP</u></button></a>
+            <a href="create account.html"><button type="button" class="button ca" autofocus="autofocus"><u>Create Account</u></button></a>
+            <a href="rental.html"><button type="button" class="button ca"><u>Rent Theatre</u></button></a>
+
+          </div> 
+        </div>
 
 <h2>Rent Whole Theatre</h2>
-<p>Enter Text.</p>
+
 <div class="row">
   <div class="col-75">
     <div class="container">
       
         <div class="row">
           <div class="col-50">
-            <h3>Header</h3>
+            
             <label>Theaters</label>
             <input type="text" id="How Many Theaters" name="How Many Theaters" placeholder="How Many Theaters">
 
@@ -194,7 +218,7 @@ span.price {
           
 
           <div class="col-50">
-            <h3>Header</h3>
+            
             <label>What Do you want to do in the Theatre?</label>
             <br>
             <br>
@@ -227,8 +251,12 @@ span.price {
         <label>
         <input type="checkbox" unchecked="checked" name="sameadr"> Food for Theatre rentals MUST be ordered prior to date of rental.
         </label>
-        <input type="submit" value="Order Food/Drink" class="btn">
-        <input type="submit" value="Continue to checkout" class="btn">
+        <a href="newTable.html">
+        <input type="button" value="Order Food/Drink" class="btn">
+      </a>
+      <a href="checkout.html">
+        <input type="button" value="Continue to checkout" class="btn">
+      </a>
     </div>
   </div>
 
